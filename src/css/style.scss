@@ -1,0 +1,344 @@
+//variables
+$dark: #222831;
+$ltdark: #393e46;
+$blu: #32e0c4;
+$lt: #eeeeee;
+
+@mixin mobileresp {
+  nav {
+    display: flex;
+    flex-direction: column;
+    .nav-title {
+      width: 100%;
+      align-items: center;
+      .logo-text {
+        width: 90%;
+      }
+    }
+    .navigation {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      margin: 10%;
+      margin-bottom: 0;
+    }
+  }
+  .btn--projects {
+    padding: 20vh 0;
+  }
+  .message-me {
+    bottom: 4%;
+  }
+  .main {
+    grid-template-areas: "lfside rtside";
+    .banner-text {
+      grid-area: rtside;
+    }
+    .bannner {
+      grid-area: lfside;
+    }
+  }
+}
+
+//default setup
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  width: 100%;
+}
+
+//code start
+body {
+  font-family: "Nunito", sans-serif;
+  overflow-x: hidden;
+  background-color: $lt;
+  overflow-y: scroll;
+}
+//navigation header
+nav {
+  padding: 5% 10%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  //   background-color: $ltdark;
+  //   padding-left: 10%;
+  align-items: center;
+  .nav-title {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    .logo-img {
+      //   position: absolute;
+      width: 7rem;
+      height: 7rem;
+      background: url("../assets/img/me.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      border: 3px inset $blu;
+      transform: rotate(-45deg);
+      &:hover {
+        animation: rotateit 1.2s infinite;
+      }
+    }
+    .logo-text {
+      //   position: absolute;
+      margin-left: -3rem;
+      width: 60%;
+      font-family: "Dancing Script", cursive;
+      border: medium outset $blu;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: x-large;
+      font-weight: bolder;
+      padding-left: 10%;
+      background-color: $dark;
+      color: $lt;
+      &:hover {
+        background-color: $ltdark;
+        color: $blu;
+      }
+    }
+  }
+  .navigation {
+    .nav-list {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      background-color: $lt;
+      li {
+        transform: skew(20deg);
+        border-bottom: medium outset $blu;
+        border-right: medium inset $blu;
+        width: 23%;
+        transition: all ease-in;
+        transition-delay: 0.1s;
+        &:hover {
+          animation: navanime 1s;
+        }
+        // background-color: $lt;
+        a {
+          text-decoration: none;
+          color: black;
+          display: block;
+          font-size: larger;
+          font-weight: bold;
+          transition: all linear;
+          transition-delay: 0.2s;
+          &:hover,
+          &:focus {
+            color: $blu;
+            font-size: x-large;
+          }
+        }
+      }
+    }
+  }
+}
+//banner start
+section {
+  height: 60vh;
+}
+.main {
+  background-image: linear-gradient(to left, $blu, $ltdark, $dark, $dark);
+  width: 100%;
+  height: 35vh;
+  padding: 4% 10%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  img {
+    width: 100%;
+    height: 50vh;
+    align-self: center;
+  }
+  .banner-text {
+    color: $lt;
+    .text {
+      font-size: x-large;
+    }
+  }
+  .sp-text {
+    color: $blu;
+  }
+  .btn {
+    padding: 1rem 1rem;
+    margin-top: 2rem;
+    background-color: $blu;
+    border-radius: 10%;
+    font-size: larger;
+    color: $dark;
+    border: none;
+    font-weight: bold;
+    i {
+      font-weight: bolder;
+      font-size: x-large;
+    }
+    &:hover {
+      background-color: $dark;
+      color: $blu;
+      border: medium solid $blu;
+    }
+  }
+}
+footer {
+  width: 100%;
+}
+.projects {
+  margin-left: 0;
+  padding-left: 0;
+  //   display: flex;
+  //   flex-direction: row;
+  //   width: 100%;
+  //   height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+
+  //   top: 40%;
+  //   transform: rotate(-90deg);
+  //   position: absolute;
+  //   left: 0;
+  //   top: 40%;
+}
+
+.btn--projects {
+  //   margin: 0;
+  padding: 20vh 1vh;
+  //   padding-left: 40vh;
+  //   padding-right: 40vh;
+  //   padding-bottom: 2rem;
+  //   margin-left: -2%;
+  background-color: $lt;
+  border-radius: 8%;
+  font-size: larger;
+  color: $dark;
+  border: medium solid $dark;
+  font-weight: bold;
+  //   span {
+  left: 0;
+  position: fixed;
+  top: 30vh;
+  div {
+    transform: rotate(90deg);
+  }
+  &:hover {
+    background-color: $blu;
+    color: $dark;
+    border: medium solid $blu;
+  }
+}
+
+.message-me {
+  position: absolute;
+  bottom: 2%;
+  right: 5%;
+  font-size: 5rem;
+  color: $dark;
+  opacity: 0.8;
+  &:hover {
+    opacity: 1;
+  }
+}
+.social-media {
+  position: absolute;
+  right: 2%;
+  bottom: 35%;
+  .social-icons {
+    margin: 15% 0;
+    font-size: 2.5rem;
+    opacity: 0.9;
+    // border: thick solid $dark;
+    // border-radius: 50%;
+    color: $dark;
+    transition: all ease-in;
+    transition-delay: 0.2s;
+    &:hover {
+      opacity: 1;
+      font-size: 3rem;
+      animation: rotateit 1.2s infinite;
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  font-size: larger;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: $dark;
+  color: $lt;
+  i {
+    color: $blu;
+  }
+}
+.fa-cog,
+.fa-arrow-circle-right {
+  animation: rotateit 2s infinite;
+}
+//animations
+@keyframes rotateit {
+  from {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(90deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes navanime {
+  from {
+    border: none;
+    border-bottom: thick outset $blu;
+  }
+  25% {
+    background-color: $dark;
+  }
+  50% {
+    border-right: thick outset $blu;
+  }
+  to {
+    width: 25%;
+  }
+}
+
+//mobile responsive
+@media screen and (max-width: 1024px) {
+  .btn--projects {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+@media screen and (min-width: 425px) and (max-width: 768px) {
+  @include mobileresp();
+}
+@media screen and (max-width: 426px) {
+  @include mobileresp();
+  .main .banner-text {
+    .text {
+      font-size: medium;
+    }
+  }
+  nav .nav-title .logo-text {
+    font-size: medium;
+  }
+  .message-me {
+    right: 2%;
+    bottom: 20%;
+    font-size: 2.5rem;
+    opacity: 0.9;
+  }
+  .main {
+    .btn {
+      font-size: large;
+    }
+  }
+}
