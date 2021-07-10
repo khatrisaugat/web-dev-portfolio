@@ -8,7 +8,7 @@ function Main() {
             <div className="main-logo"><span><p className="text sp-text rotate-90">Developer</p></span></div>
             <div className="main-text"> <h2><span className="sp-text"><FaArrowAltCircleRight className="fa-arrow-circle-right" /></span> Hi.</h2>
                 <p className="text">I'm Saugat Khatri,<br /><span className="sp-text">web </span> developer.<br /></p>
-                <span className="text sp-text" onClick={ScrollDown}>
+                <span className="text sp-text scrollDownText" onClick={ScrollDown}>
                     <br />
                     <br />
                     <FaArrowAltCircleDown /> scroll down

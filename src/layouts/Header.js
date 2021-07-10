@@ -13,7 +13,7 @@ function Header() {
                 <div className="navigation">
                     <ul className="nav-list">
                         <li><a href={'http://google.com'}><FaHome /> Home</a></li>
-                        <li><a href={'http://google.com'}><FaUser /> About</a></li>
+                        {/* <li><a href={'http://google.com'}><FaUser /> About</a></li> */}
                         <li><a href={'http://google.com'}><FaEnvelope /> Contact</a></li>
                         <li><a href={'http://google.com'}><FaCog className="fa-cog" /> Projects</a></li>
                     </ul>
