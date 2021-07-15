@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import CarouselItem from "../components/CarouselItem";
 import projectsData from "../assets/data/projectsData";
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa'
@@ -33,7 +33,7 @@ function Projects() {
     console.log(items);
     // console.log(projectsData);
     return (
-        <div className="projects">
+        <div className="section-card" id="Projects">
             <div className="main-glass">
                 <div className="part-heading">
                     <h2>Projects</h2>

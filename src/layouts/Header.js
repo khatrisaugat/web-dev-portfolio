@@ -1,8 +1,12 @@
-import { FaHome, FaUser, FaEnvelope, FaCog } from 'react-icons/fa'
+import { FaHome, FaEnvelope, FaCog } from 'react-icons/fa'
 
 function Header() {
+    const NavClick = (Id) => {
+        document.getElementById(Id).scrollIntoView();
+        // alert(Id)
+    }
     return (
-        <header>
+        <header id="Header">
             <nav>
                 <div className="nav-title">
                     <div className="logo-img"></div>
@@ -12,14 +16,14 @@ function Header() {
                 </div>
                 <div className="navigation">
                     <ul className="nav-list">
-                        <li><a href={'http://google.com'}><FaHome /> Home</a></li>
+                        <li><span onClick={() => NavClick("Header")}><FaHome /> Home</span></li>
                         {/* <li><a href={'http://google.com'}><FaUser /> About</a></li> */}
-                        <li><a href={'http://google.com'}><FaEnvelope /> Contact</a></li>
-                        <li><a href={'http://google.com'}><FaCog className="fa-cog" /> Projects</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
+                        <li><span onClick={() => NavClick("Projects")}><FaCog className="fa-cog" /> Projects</span></li>
+                        <li><span onClick={() => NavClick("Contact")}><FaEnvelope /> Contact</span></li>
+                    </ul >
+                </div >
+            </nav >
+        </header >
     )
 }
 
