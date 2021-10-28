@@ -3,7 +3,7 @@ import Button from "./Button";
 function Form() {
     return (
         <div className="contact-form">
-            <h3>Contact Me</h3>
+
             <form name="login" className="form">
                 {/* <div className="row"> */}
                 <div className="input-control">

@@ -3,17 +3,17 @@ import CarouselItem from "../components/CarouselItem";
 import projectsData from "../assets/data/projectsData";
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa'
 function Projects() {
-    const handleLeftClick = () => {
+    const handleLeftClick = (noOfCards) => {
         if (counter === 0) {
-            counterFuct(Math.round(projectsData.length / 3) - 1);
+            counterFuct(Math.round(projectsData.length / noOfCards) - 1);
         }
         //console.log(projectsData.length)
         else {
             counterFuct(counter - 1);
         }
     }
-    const handleRightClick = () => {
-        if (counter < Math.round(projectsData.length / 3) - 1)
+    const handleRightClick = (noOfCards) => {
+        if (counter < Math.round(projectsData.length / noOfCards) - 1)
             //console.log(projectsData.length)
             counterFuct(counter + 1);
         else
@@ -27,7 +27,13 @@ function Projects() {
         }
         return res;
     }
-    const noOfCard = 3;
+    let noOfCard;
+    if (window.screen.width <= 425) {
+        noOfCard = 1;
+    } else {
+        noOfCard = 3;
+    }
+
     const [counter, counterFuct] = useState(0);
     const items = sliceIntoChunks(projectsData, noOfCard)
     console.log(items);
@@ -43,8 +49,8 @@ function Projects() {
                     {items[counter].map((cur, i) => <CarouselItem title={cur.title} description={cur.description} key={i} />)}
                 </div>
             </div>
-            <span className="left-arrow" onClick={handleLeftClick}><FaArrowAltCircleLeft /></span>
-            <span className="right-arrow" onClick={handleRightClick}><FaArrowAltCircleRight /></span>
+            <span className="left-arrow" onClick={() => handleLeftClick(noOfCard)}><FaArrowAltCircleLeft /></span>
+            <span className="right-arrow" onClick={() => handleRightClick(noOfCard)}><FaArrowAltCircleRight /></span>
         </div>
     )
 }

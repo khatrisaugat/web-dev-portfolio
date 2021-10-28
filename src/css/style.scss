@@ -23,16 +23,75 @@ $lt: #eeeeee;
       bottom: 0;
       width: 100%;
       margin: 10%;
+      z-index: 999;
       margin-bottom: 0;
-      background: rgba( 255, 255, 255, 0.25 );
+      background: $dark;
+      // padding: 1rem 0;
+      padding-top: 0.5rem;
       box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
       backdrop-filter: blur( 1rem );
       -webkit-backdrop-filter: blur( 1rem );
+      .nav-list{
+      li{
+        &:hover {
+          animation:none;
+
+        }
+        span{
+          transition: none;
+          // font-size: large;
+        }
+      }
+      &:focus,&:hover{
+        // font-size: large;
+        color: $blu;
+        // background-color: #32e0c4;
+      }
+    }
     }
     .nav-list{
       padding-bottom: 0;
       margin-bottom: 0;
     }
+  }
+  .row{
+    flex-direction: column;
+  }
+  .Maps{
+    margin-left: 0;
+  }
+  .section-card{
+    .main-glass {
+      .multi-carousel{
+        .card{
+          width: auto;
+        }
+      }
+    }
+    .part-heading{
+      // display: none;
+      font-size: large;
+    }
+  } 
+  .main{
+    flex-direction: column-reverse;
+    .main-logo{
+      span{
+        p{
+          margin-top: -27rem;
+        }
+      } 
+    } 
+    .main-text{
+      width: 100%;
+      align-items: center;
+    }
+    .main-content{
+      width: 100%;
+    }
+  } 
+  .goBackToTop{
+    display: none;
   }
   // .btn--projects {
   //   padding: 20vh 0;
@@ -53,8 +112,8 @@ $lt: #eeeeee;
 
 //default setup
 * {
-  margin: 0;
-  padding: 0;
+  margin: 0 0;
+  padding: 0 0;
   box-sizing: border-box;
 }
 
@@ -143,7 +202,7 @@ nav {
           text-decoration: none;
           color: $lt;
           display: block;
-          font-size: larger;
+          font-size: large;
           font-weight: bolder;
           transition: all linear;
           transition-delay: 0.2s;
@@ -165,6 +224,7 @@ nav {
 //light dark slider css
 .switch {
   position: fixed;
+  z-index: 999;
   display: inline-block;
   width: 60px;
   height: 34px;

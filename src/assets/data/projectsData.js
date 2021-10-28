@@ -9,7 +9,7 @@ const projectsData = [
     {
         title: "SIS",
         image: "../img/lock-design.png",
-        description: "A school management software that is used for billing.",
+        description: "A school management software that is used for billing. It is important for any school",
         previewLink: "",
         gitLink: ""
     },

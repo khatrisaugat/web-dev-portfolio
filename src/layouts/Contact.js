@@ -5,7 +5,7 @@ function Contact() {
         <div className="section-card" id="Contact">
             <div className="main-glass">
                 <div className="part-heading">
-                    <h2>Contact Me</h2>
+                    <h3>Contact Me</h3>
                 </div>
                 <div className="row">
                     <Form />
