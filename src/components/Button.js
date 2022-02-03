@@ -1,10 +1,10 @@
 const Button = (props) => {
     return (
-        <>
-            <span className="btn">
-                <p>{props.title}</p>
-            </span>
-        </>
+        <button className="btn" onClick={()=>props.url? window.open(props.url,"_blank"):''}>
+            {/* <span className="btn"> */}
+                {props.title}
+            {/* </span> */}
+        </button>
 
     )
 }

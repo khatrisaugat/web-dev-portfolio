@@ -7,8 +7,8 @@ const CarouselItem = (props) => {
             <div className="title">{props.title}</div>
             <div className="description">{props.description}</div>
             <div className="actions">
-                {props.previewLink!==''? <Button title="preview" />: ''}
-                {props.gitLink!==''? <Button title="open in git" />: ''}
+                {props.previewLink!==''? <Button title="preview" url={props.previewLink} />: ''}
+                {props.gitLink!==''? <Button title="open in git" url={props.gitLink} />: ''}
 
                 {/* <Button title="open in git" /> */}
             </div>
