@@ -46,7 +46,7 @@ function Projects() {
                 </div>
                 <div className="multi-carousel">
                     {/* {console.log(counter)} */}
-                    {items[counter].map((cur, i) => <CarouselItem title={cur.title} description={cur.description} key={i} />)}
+                    {items[counter].map((cur, i) => <CarouselItem title={cur.title} description={cur.description} image={cur.image} key={i} gitLink={cur.gitLink} previewLink={cur.previewLink} />)}
                 </div>
             </div>
             <span className="left-arrow" onClick={() => handleLeftClick(noOfCard)}><FaArrowAltCircleLeft /></span>

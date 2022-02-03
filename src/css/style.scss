@@ -832,6 +832,10 @@ input:checked + .slider:before {
       font-size: 3rem;
       animation: rotateit 1.2s infinite;
     }
+   .social-a-link{
+     text-decoration: none;
+     color: $blu;
+   }
   }
 }
 

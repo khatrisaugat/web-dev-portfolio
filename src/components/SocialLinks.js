@@ -4,16 +4,10 @@ function SocialLinks() {
     return (
         <div className="social-media">
             <div className="social-icons">
-                <FaGithub />
+                <a href='https://github.com/khatrisaugat' target="_blank" className='social-a-link'><FaGithub /></a>
             </div>
             <div className="social-icons">
-                <FaFacebook />
-            </div>
-            <div className="social-icons">
-                <FaInstagram />
-            </div>
-            <div className="social-icons">
-                <FaFacebookMessenger />
+                <a href='https://www.facebook.com/khatri.saugat55/' target="_blank" className='social-a-link'><FaFacebook /></a>
             </div>
         </div>
     )

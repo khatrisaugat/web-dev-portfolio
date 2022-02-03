@@ -1,5 +1,5 @@
 // import 'bootstrap/dist/css/bootstrap.min.css'
-import './css/style.min.css'
+import './css/style.css'
 import './App.css';
 // import Container from 'react-bootstrap/Container'
 import Home from './pages/Home'
